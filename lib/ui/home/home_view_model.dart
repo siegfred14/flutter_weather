@@ -1,6 +1,7 @@
 import 'package:cfrd_temp_app/services/weather_service/weather_service.dart';
 import 'package:flutter/cupertino.dart';
 
+import '../../models/weather_model.dart';
 import '../../utils/locator_setup.dart';
 
 class Home extends ChangeNotifier {
@@ -8,5 +9,11 @@ class Home extends ChangeNotifier {
 
   String cityName = 'Quebec';
 
-  void init() {}
+  WeatherModel? weatherModel;
+
+  Future<void> init() async {
+    await weatherService
+        .getWeatherDetails(cityName: cityName)
+        .then((value) => {weatherModel = value});
+  }
 }
