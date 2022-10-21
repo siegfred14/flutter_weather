@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import '../../models/weather_model.dart';
 import '../../utils/locator_setup.dart';
 
-class Home extends ChangeNotifier {
+class HomeViewModel extends ChangeNotifier {
   final weatherService = serviceLocator<WeatherService>();
 
   String cityName = 'Quebec';
