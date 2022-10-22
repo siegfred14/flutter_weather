@@ -3,9 +3,12 @@ import 'package:cfrd_temp_app/ui/splash/splash.dart';
 import 'package:cfrd_temp_app/utils/locator_setup.dart';
 import 'package:cfrd_temp_app/utils/provider_setup.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 Future<void> main() async {
+  SystemChrome.setSystemUIOverlayStyle(
+      const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
   locatorSetup();
 
   runApp(MultiProvider(providers: providers, child: const MyApp()));
