@@ -17,7 +17,15 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Consumer<HomeViewModel>(builder: (context, model, child) {
-      return Scaffold(body: Container());
+      return Scaffold(
+        body: model.isLoading!
+            ? Container(
+                child: Text('Loading...'),
+              )
+            : Container(
+                child: Text(model.weatherModel!.main!.temp.toString()),
+              ),
+      );
     });
   }
 }

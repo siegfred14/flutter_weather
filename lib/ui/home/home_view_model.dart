@@ -11,9 +11,16 @@ class HomeViewModel extends ChangeNotifier {
 
   WeatherModel? weatherModel;
 
+  bool? isLoading = false;
+
   Future<void> init() async {
-    await weatherService
-        .getWeatherDetails(cityName: cityName)
-        .then((value) => {weatherModel = value});
+    setIsLoading(v: true);
+    await weatherService.getWeatherDetails(cityName: cityName).then((value) {
+      weatherModel = value;
+      setIsLoading(v: false);
+      notifyListeners();
+    });
   }
+
+  void setIsLoading({bool? v}) => isLoading = v;
 }
