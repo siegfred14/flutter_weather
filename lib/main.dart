@@ -1,4 +1,5 @@
 import 'package:cfrd_temp_app/ui/home/home.dart';
+import 'package:cfrd_temp_app/ui/splash/splash.dart';
 import 'package:cfrd_temp_app/utils/locator_setup.dart';
 import 'package:cfrd_temp_app/utils/provider_setup.dart';
 import 'package:flutter/material.dart';
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
         highlightColor: Colors.transparent,
       ),
       home: Material(
-        child: Builder(builder: (BuildContext context) => Home()),
+        child: Builder(builder: (BuildContext context) => Splash()),
       ),
     );
   }
