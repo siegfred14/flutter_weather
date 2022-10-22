@@ -18,7 +18,7 @@ class HomeViewModel extends ChangeNotifier {
     await weatherService.getWeatherDetails(cityName: cityName).then((value) {
       weatherModel = value;
       setIsLoading(v: false);
-      notifyListeners();
+      // notifyListeners();
     });
   }
 
