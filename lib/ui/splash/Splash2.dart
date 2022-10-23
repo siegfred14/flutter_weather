@@ -64,8 +64,11 @@ class _Splash2State extends State<Splash2> {
                   padding: const EdgeInsets.fromLTRB(47, 0, 0, 0),
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                        minimumSize: Size(292, 62), primary: Color(0xff0C1823)),
-                    child: Text(
+                        minimumSize: const Size(292, 62),
+                        primary: const Color(0xff0C1823),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16))),
+                    child: const Text(
                       "Let's Check",
                       style: TextStyle(
                         color: Color(0xffFCFCFC),
