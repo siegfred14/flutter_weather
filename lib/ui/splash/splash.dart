@@ -1,5 +1,5 @@
 import 'dart:async';
-
+import 'package:cfrd_temp_app/ui/splash/splash2.dart';
 import 'package:flutter/material.dart';
 
 class Splash extends StatefulWidget {
@@ -10,12 +10,17 @@ class Splash extends StatefulWidget {
 }
 
 class _SplashState extends State<Splash> {
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   Timer(Duration(seconds: 3), ()=>Navigator.pushReplacement(context, MaterialPageRoute(builder: ((context) => Splash2()))))
-
-  // }
+  @override
+  void initState() {
+    super.initState();
+    Timer(
+      Duration(seconds: 5),
+      () => Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: ((context) => Splash2())),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {

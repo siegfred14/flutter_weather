@@ -7,8 +7,8 @@ import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 Future<void> main() async {
-  SystemChrome.setSystemUIOverlayStyle(
-      const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
+  // SystemChrome.setSystemUIOverlayStyle(
+  //     const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
   locatorSetup();
 
   runApp(MultiProvider(providers: providers, child: const MyApp()));
