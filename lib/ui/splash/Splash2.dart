@@ -1,3 +1,4 @@
+import 'package:cfrd_temp_app/ui/home/home.dart';
 import 'package:flutter/material.dart';
 
 class Splash2 extends StatefulWidget {
@@ -15,7 +16,7 @@ class _Splash2State extends State<Splash2> {
         // width: double.infinity,
         height: double.infinity,
         width: MediaQuery.of(context).size.width,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Color(0xffFFFFFF),
         ),
         child: Column(
@@ -36,7 +37,6 @@ class _Splash2State extends State<Splash2> {
             const Text.rich(
               TextSpan(
                 children: <InlineSpan>[
-                  // alignment: ui.PlaceholderAlignment.middle,
                   TextSpan(text: "Let's see \nThe"),
                   WidgetSpan(
                       child: Icon(
@@ -55,6 +55,30 @@ class _Splash2State extends State<Splash2> {
                 fontWeight: FontWeight.w700,
               ),
             ),
+            const SizedBox(
+              height: 193,
+            ),
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(47, 0, 0, 0),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: Size(292, 62), primary: Color(0xff0C1823)),
+                    child: Text(
+                      "Let's Check",
+                      style: TextStyle(
+                        color: Color(0xffFCFCFC),
+                        fontFamily: "Poppins",
+                        fontWeight: FontWeight.w400,
+                        fontSize: 20,
+                      ),
+                    ),
+                    onPressed: () => Home(),
+                  ),
+                ),
+              ],
+            )
           ],
         ),
       ),
