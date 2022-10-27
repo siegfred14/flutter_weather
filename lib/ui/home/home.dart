@@ -157,27 +157,40 @@ class Home extends StatelessWidget {
                           ),
                         ],
                       ),
-                      Column(
-                        children: const [
-                          Text.rich(
-                            TextSpan(
-                              children: <InlineSpan>[
+                      Row(
+                        children: [
+                          Column(
+                            children: [
+                              Image.asset(
+                                'assets/images/windy_icon.png',
+                                width: 25,
+                                height: 25,
+                              )
+                            ],
+                          ),
+                          Column(
+                            children: const [
+                              Text.rich(
                                 TextSpan(
-                                    text: "Today's Like\n",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 15,
-                                        fontFamily: "Poppins",
-                                        fontWeight: FontWeight.w400)),
-                                TextSpan(
-                                    text: "25\u2103",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 44,
-                                        fontFamily: "Poppins",
-                                        fontWeight: FontWeight.w400)),
-                              ],
-                            ),
+                                  children: <InlineSpan>[
+                                    TextSpan(
+                                        text: "Today's Like\n",
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 15,
+                                            fontFamily: "Poppins",
+                                            fontWeight: FontWeight.w400)),
+                                    TextSpan(
+                                        text: "25\u2103",
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 44,
+                                            fontFamily: "Poppins",
+                                            fontWeight: FontWeight.w400)),
+                                  ],
+                                ),
+                              ),
+                            ],
                           ),
                         ],
                       ),
