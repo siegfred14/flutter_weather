@@ -190,12 +190,23 @@ class Home extends StatelessWidget {
                                   ],
                                 ),
                               ),
+                              // Row(
+                              //   children: [
+                              //     Image.asset(
+                              //       'assets/images/cloudy_day_icon.png',
+                              //       width: 25,
+                              //       height: 25,
+                              //     ),
+                              //   ],
+                              // ),
                             ],
                           ),
                           Column(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Image.asset(
-                                'assets/images/clear_night_icon.png',
+                                'assets/images/thunderstorm_icon.png',
                                 width: 25,
                                 height: 25,
                               )
