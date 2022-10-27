@@ -146,9 +146,14 @@ class Home extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Image.asset(
-                            'assets/images/ccn_flutter_splash2_1.png',
-                            width: 158,
-                            height: 137,
+                            'assets/images/cloudy_day_icon.png',
+                            width: 25,
+                            height: 25,
+                          ),
+                          Image.asset(
+                            'assets/images/rain_icon.png',
+                            width: 25,
+                            height: 25,
                           ),
                         ],
                       ),
