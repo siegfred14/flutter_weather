@@ -2,72 +2,239 @@ import 'package:cfrd_temp_app/ui/home/home_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class Home extends StatefulWidget {
-  @override
-  State<Home> createState() => _HomeState();
-}
+// class Home extends StatefulWidget {
+//   @override
+//   State<Home> createState() => _HomeState();
+// }
 
-class _HomeState extends State<Home> {
-  @override
-  void initState() {
-    Future.microtask(() => context.read<HomeViewModel>().init());
-    super.initState();
-  }
+// class _HomeState extends State<Home> {
+//   @override
+//   // void initState() {
+//   //   Future.microtask(() => context.read<HomeViewModel>().init());
+//   //   super.initState();
+//   // }
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Consumer<HomeViewModel>(builder: (context, model, child) {
+//       return Scaffold(
+//         // App bar
+//         appBar: AppBar(
+//           backgroundColor: Colors.white,
+//           title: const Text(
+//             "Quebec-Canada",
+//             style: TextStyle(
+//                 color: Color(0xff36424D),
+//                 fontFamily: "Poppins",
+//                 fontWeight: FontWeight.w400,
+//                 fontSize: 12),
+//           ),
+//           leading: Image.asset("assets/images/rectangle10.png"),
+//         ),
+//         // Body
+//         body: Container(
+//           child: Column(
+//             children: const [
+//               Text('Loading...'),
+//               // model.isLoading!
+//               //     ? const Text('Loading...')
+//               //     : Text(model.weatherModel!.main!.temp.toString()),
+//               // Space
+//               SizedBox(
+//                 height: 110,
+//               ),
+//               // FeelsLike
+//               Padding(
+//                 padding: EdgeInsets.all(8.0),
+//                 child: Text.rich(
+//                   TextSpan(
+//                     children: <InlineSpan>[
+//                       TextSpan(text: "Feels Like A Good\nTime to ..."),
+//                       TextSpan(text: "\nride a bike"),
+//                       WidgetSpan(child: Icon(Icons.bike_scooter)),
+//                       // WidgetSpan(child: Icon()))
+//                       // WidgetSpan(child: Image.asset("assets/images/vector.png")),
+//                     ],
+//                   ),
+//                   textAlign: TextAlign.left,
+//                   style: TextStyle(
+//                     fontSize: 45,
+//                     color: Color(0xff0C1823),
+//                     fontFamily: 'poppins',
+//                     fontWeight: FontWeight.w700,
+//                   ),
+//                 ),
+//               ),
+//             ],
+//           ),
+
+//         ),
+//       );
+//     });
+//   }
+// }
+
+class Home extends StatelessWidget {
+  const Home({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<HomeViewModel>(builder: (context, model, child) {
-      return Scaffold(
-        // App bar
-        appBar: AppBar(
-          title: const Text(
-            "Quebec-Canada",
-            style: TextStyle(
-                color: Color(0xff36424D),
-                fontFamily: "Poppins",
-                fontWeight: FontWeight.w400,
-                fontSize: 12),
-          ),
-          leading: Image.asset("assets/images/rectangle10.png"),
+    return Scaffold(
+      body: Container(
+        height: double.infinity,
+        width: MediaQuery.of(context).size.width,
+        decoration: const BoxDecoration(
+          color: Color(0xffFFFFFF),
         ),
-        // Body
-        body: Container(
-            child: Column(
+        child: Column(
           children: [
-            model.isLoading!
-                ? const Text('Loading...')
-                : Text(model.weatherModel!.main!.temp.toString()),
-            // Space
-            const SizedBox(
-              height: 110,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Image.asset(
+                  'assets/images/rectangle10.png',
+                  width: 158,
+                  height: 137,
+                ),
+                const Text(
+                  "Quebec-Canada",
+                  style: TextStyle(
+                      color: Color(0xff36424D),
+                      fontFamily: "Poppins",
+                      fontWeight: FontWeight.w400,
+                      fontSize: 12),
+                )
+              ],
             ),
-            // FeelsLike
-            const Text.rich(
-              TextSpan(
-                children: <InlineSpan>[
-                  TextSpan(text: "Feels Like A Good\nTime to ..."),
-                  WidgetSpan(
-                    child: Padding(
-                      padding: const EdgeInsets.fromLTRB(5, 0, 0, 5),
-                      child: Image.asset(
-                        "assets/images/rectangle10.png",
-                        width: 30,
+            Padding(
+              padding: const EdgeInsets.fromLTRB(42, 30, 0, 0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  const Text("Feels like a good\ntime to ride a bike ",
+                      style: TextStyle(
+                        fontSize: 24,
+                        color: Color(0xff0C1823),
+                        fontFamily: 'poppins',
+                        fontWeight: FontWeight.w500,
+                      )),
+                  const SizedBox(
+                    width: 15,
+                  ),
+                  Image.asset(
+                    'assets/images/vector.png',
+                    width: 24,
+                    height: 24,
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            Column(
+              children: [
+                Container(
+                  height: 265,
+                  width: 265,
+                  margin: EdgeInsets.all(10.0),
+                  decoration: const BoxDecoration(
+                      color: Color(0xff0C1823), shape: BoxShape.circle),
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Image.asset(
+                            'assets/images/ccn_flutter_splash2_1.png',
+                            width: 158,
+                            height: 137,
+                          ),
+                        ],
                       ),
+                      Column(
+                        children: const [
+                          Text.rich(
+                            TextSpan(
+                              children: <InlineSpan>[
+                                TextSpan(
+                                    text: "Today's Like\n",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 15,
+                                        fontFamily: "Poppins",
+                                        fontWeight: FontWeight.w400)),
+                                TextSpan(
+                                    text: "25\u2103",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 44,
+                                        fontFamily: "Poppins",
+                                        fontWeight: FontWeight.w400)),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                )
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(42, 60, 0, 0),
+              child: Row(
+                // mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: const [
+                  Text.rich(
+                    TextSpan(
+                      children: <InlineSpan>[
+                        TextSpan(
+                            text: "Today's Mood\n",
+                            style: TextStyle(
+                                color: Color(0xff36424D),
+                                fontSize: 14,
+                                fontFamily: "Poppins",
+                                fontWeight: FontWeight.w400)),
+                        TextSpan(
+                            text: "Very Good",
+                            style: TextStyle(
+                                color: Color(0xff0C1823),
+                                fontSize: 12,
+                                fontFamily: "Poppins",
+                                fontWeight: FontWeight.w500)),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    width: 35,
+                  ),
+                  Text.rich(
+                    TextSpan(
+                      children: <InlineSpan>[
+                        TextSpan(
+                            text: "Tomorrow's Mood\n",
+                            style: TextStyle(
+                                color: Color(0xff36424D),
+                                fontSize: 14,
+                                fontFamily: "Poppins",
+                                fontWeight: FontWeight.w400)),
+                        TextSpan(
+                            text: "Excellent",
+                            style: TextStyle(
+                                color: Color(0xff0C1823),
+                                fontSize: 12,
+                                fontFamily: "Poppins",
+                                fontWeight: FontWeight.w500)),
+                      ],
                     ),
                   ),
                 ],
               ),
-              textAlign: TextAlign.left,
-              style: TextStyle(
-                fontSize: 45,
-                color: Color(0xff0C1823),
-                fontFamily: 'poppins',
-                fontWeight: FontWeight.w700,
-              ),
             ),
           ],
-        )),
-      );
-    });
+        ),
+      ),
+    );
   }
 }
