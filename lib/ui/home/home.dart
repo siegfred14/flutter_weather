@@ -192,6 +192,15 @@ class Home extends StatelessWidget {
                               ),
                             ],
                           ),
+                          Column(
+                            children: [
+                              Image.asset(
+                                'assets/images/clear_night_icon.png',
+                                width: 25,
+                                height: 25,
+                              )
+                            ],
+                          ),
                         ],
                       ),
                     ],
