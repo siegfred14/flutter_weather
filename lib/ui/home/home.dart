@@ -134,7 +134,7 @@ class Home extends StatelessWidget {
             ),
             Container(
               // height: 265,
-              width: 265,
+              width: 300,
               margin: EdgeInsets.all(10.0),
               decoration: const BoxDecoration(
                   color: Color(0xff0C1823), shape: BoxShape.circle),
@@ -280,16 +280,19 @@ class Home extends StatelessWidget {
                     ),
                   ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Column(
-                        children: [
-                          Image.asset(
-                            'assets/images/windy_icon.png',
-                            width: 55,
-                            height: 55,
-                          )
-                        ],
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 0, 35, 0),
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              'assets/images/windy_icon.png',
+                              width: 55,
+                              height: 55,
+                            )
+                          ],
+                        ),
                       ),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.end,
@@ -325,19 +328,23 @@ class Home extends StatelessWidget {
                           ),
                         ],
                       ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            'assets/images/clear_night_icon.png',
-                            width: 55,
-                            height: 55,
-                          )
-                        ],
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(65, 0, 0, 0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              'assets/images/clear_night_icon.png',
+                              width: 55,
+                              height: 55,
+                            )
+                          ],
+                        ),
                       ),
                     ],
                   ),
+
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.end,
