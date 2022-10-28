@@ -262,7 +262,7 @@ class Home extends StatelessWidget {
                   // ),
 
                   Padding(
-                    padding: const EdgeInsets.fromLTRB(10, 20, 10, 0),
+                    padding: const EdgeInsets.fromLTRB(15, 20, 15, 0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -280,6 +280,7 @@ class Home extends StatelessWidget {
                     ),
                   ),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Column(
                         children: [
