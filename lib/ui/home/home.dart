@@ -130,94 +130,226 @@ class Home extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 15,
+              height: 25,
             ),
-            Column(
-              children: [
-                Container(
-                  height: 265,
-                  width: 265,
-                  margin: EdgeInsets.all(10.0),
-                  decoration: const BoxDecoration(
-                      color: Color(0xff0C1823), shape: BoxShape.circle),
-                  child: Column(
+            Container(
+              // height: 265,
+              width: 265,
+              margin: EdgeInsets.all(10.0),
+              decoration: const BoxDecoration(
+                  color: Color(0xff0C1823), shape: BoxShape.circle),
+              child: Column(
+                children: [
+                  // Stack(
+                  //   children: <Widget>[
+                  //     Positioned(
+                  //       top: 261,
+                  //       left: 44,
+                  //       height: 55,
+                  //       width: 55,
+                  //       child: Image.asset(
+                  //       'assets/images/cloudy_day_icon.png',
+                  //       width: 55,
+                  //       height: 55,
+                  //       ),
+                  //     ),
+                  //   ],
+                  // ),
+                  // Stack(
+                  //   children: <Widget>[
+                  //     Positioned(
+                  //       top: 261,
+                  //       left: 252,
+                  //       height: 55,
+                  //       width: 55,
+                  //       child: Image.asset(
+                  //       'assets/images/rain_icon.png',
+                  //       width: 55,
+                  //       height: 55,
+                  //       ),
+                  //     ),
+                  //   ],
+                  // ),
+                  // Stack(
+                  //   children: const <Widget>[
+                  //     Positioned(
+                  //       top: 315,
+                  //       left: 114,
+                  //       height: 87,
+                  //       width: 83,
+                  //       child: Text.rich(
+                  //           TextSpan(
+                  //             children: <InlineSpan>[
+                  //               TextSpan(
+                  //                   text: "Today's Like\n",
+                  //                   style: TextStyle(
+                  //                       color: Colors.white,
+                  //                       fontSize: 15,
+                  //                       fontFamily: "Poppins",
+                  //                       fontWeight: FontWeight.w400)),
+                  //               TextSpan(
+                  //                   text: "25\u2103",
+                  //                   style: TextStyle(
+                  //                       color: Colors.white,
+                  //                       fontSize: 44,
+                  //                       fontFamily: "Poppins",
+                  //                       fontWeight: FontWeight.w400)),
+                  //             ],
+                  //           ),
+                  //         ),
+                  //     ),
+                  //   ],
+                  // ),
+                  // Stack(
+                  //   children: <Widget>[
+                  //     Positioned(
+                  //       top: 261,
+                  //       left: 44,
+                  //       height: 85,
+                  //       width: 85,
+                  //       child: Image.asset(
+                  //       'assets/images/sunrise.png',
+                  //       width: 85,
+                  //       height: 85,
+                  //       ),
+                  //     ),
+                  //   ],
+                  // ),
+                  // Stack(
+                  //   children: <Widget>[
+                  //     Positioned(
+                  //       top: 384,
+                  //       left: 41,
+                  //       height: 55,
+                  //       width: 55,
+                  //       child: Image.asset(
+                  //       'assets/images/windy_icon.png',
+                  //       width: 55,
+                  //       height: 55,
+                  //       ),
+                  //     ),
+                  //   ],
+                  // ),
+                  // Stack(
+                  //   children: <Widget>[
+                  //     Positioned(
+                  //       top: 384,
+                  //       left: 264,
+                  //       height: 55,
+                  //       width: 55,
+                  //       child: Image.asset(
+                  //       'assets/images/clear_night_icon.png',
+                  //       width: 55,
+                  //       height: 55,
+                  //       ),
+                  //     ),
+                  //   ],
+                  // ),
+                  // Stack(
+                  //   children: <Widget>[
+                  //     Positioned(
+                  //       top: 471,
+                  //       left: 148,
+                  //       height: 55,
+                  //       width: 55,
+                  //       child: Image.asset(
+                  //       'assets/images/thunderstorm_icon.png',
+                  //       width: 55,
+                  //       height: 55,
+                  //       ),
+                  //     ),
+                  //   ],
+                  // ),
+
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(10, 20, 10, 0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Image.asset(
+                          'assets/images/cloudy_day_icon.png',
+                          width: 55,
+                          height: 55,
+                        ),
+                        Image.asset(
+                          'assets/images/rain_icon.png',
+                          width: 55,
+                          height: 55,
+                        ),
+                      ],
+                    ),
+                  ),
+                  Row(
                     children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      Column(
                         children: [
                           Image.asset(
-                            'assets/images/cloudy_day_icon.png',
-                            width: 25,
-                            height: 25,
+                            'assets/images/windy_icon.png',
+                            width: 55,
+                            height: 55,
+                          )
+                        ],
+                      ),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          const Text.rich(
+                            TextSpan(
+                              children: <InlineSpan>[
+                                TextSpan(
+                                    text: "Today's Like\n",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 15,
+                                        fontFamily: "Poppins",
+                                        fontWeight: FontWeight.w400)),
+                                TextSpan(
+                                    text: "25\u2103",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 44,
+                                        fontFamily: "Poppins",
+                                        fontWeight: FontWeight.w400)),
+                              ],
+                            ),
                           ),
-                          Image.asset(
-                            'assets/images/rain_icon.png',
-                            width: 25,
-                            height: 25,
+                          Row(
+                            children: [
+                              Image.asset(
+                                'assets/images/sunrise.png',
+                                width: 85,
+                                height: 85,
+                              ),
+                            ],
                           ),
                         ],
                       ),
-                      Row(
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Column(
-                            children: [
-                              Image.asset(
-                                'assets/images/windy_icon.png',
-                                width: 25,
-                                height: 25,
-                              )
-                            ],
-                          ),
-                          Column(
-                            children: const [
-                              Text.rich(
-                                TextSpan(
-                                  children: <InlineSpan>[
-                                    TextSpan(
-                                        text: "Today's Like\n",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 15,
-                                            fontFamily: "Poppins",
-                                            fontWeight: FontWeight.w400)),
-                                    TextSpan(
-                                        text: "25\u2103",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 44,
-                                            fontFamily: "Poppins",
-                                            fontWeight: FontWeight.w400)),
-                                  ],
-                                ),
-                              ),
-                              // Row(
-                              //   children: [
-                              //     Image.asset(
-                              //       'assets/images/cloudy_day_icon.png',
-                              //       width: 25,
-                              //       height: 25,
-                              //     ),
-                              //   ],
-                              // ),
-                            ],
-                          ),
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Image.asset(
-                                'assets/images/thunderstorm_icon.png',
-                                width: 25,
-                                height: 25,
-                              )
-                            ],
-                          ),
+                          Image.asset(
+                            'assets/images/clear_night_icon.png',
+                            width: 55,
+                            height: 55,
+                          )
                         ],
                       ),
                     ],
                   ),
-                )
-              ],
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Image.asset(
+                        'assets/images/thunderstorm_icon.png',
+                        width: 55,
+                        height: 55,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(42, 60, 0, 0),
