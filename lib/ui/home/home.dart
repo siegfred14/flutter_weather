@@ -2,81 +2,14 @@ import 'package:cfrd_temp_app/ui/home/home_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-// class Home extends StatefulWidget {
-//   @override
-//   State<Home> createState() => _HomeState();
-// }
-
-// class _HomeState extends State<Home> {
-//   @override
-//   // void initState() {
-//   //   Future.microtask(() => context.read<HomeViewModel>().init());
-//   //   super.initState();
-//   // }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Consumer<HomeViewModel>(builder: (context, model, child) {
-//       return Scaffold(
-//         // App bar
-//         appBar: AppBar(
-//           backgroundColor: Colors.white,
-//           title: const Text(
-//             "Quebec-Canada",
-//             style: TextStyle(
-//                 color: Color(0xff36424D),
-//                 fontFamily: "Poppins",
-//                 fontWeight: FontWeight.w400,
-//                 fontSize: 12),
-//           ),
-//           leading: Image.asset("assets/images/rectangle10.png"),
-//         ),
-//         // Body
-//         body: Container(
-//           child: Column(
-//             children: const [
-//               Text('Loading...'),
-//               // model.isLoading!
-//               //     ? const Text('Loading...')
-//               //     : Text(model.weatherModel!.main!.temp.toString()),
-//               // Space
-//               SizedBox(
-//                 height: 110,
-//               ),
-//               // FeelsLike
-//               Padding(
-//                 padding: EdgeInsets.all(8.0),
-//                 child: Text.rich(
-//                   TextSpan(
-//                     children: <InlineSpan>[
-//                       TextSpan(text: "Feels Like A Good\nTime to ..."),
-//                       TextSpan(text: "\nride a bike"),
-//                       WidgetSpan(child: Icon(Icons.bike_scooter)),
-//                       // WidgetSpan(child: Icon()))
-//                       // WidgetSpan(child: Image.asset("assets/images/vector.png")),
-//                     ],
-//                   ),
-//                   textAlign: TextAlign.left,
-//                   style: TextStyle(
-//                     fontSize: 45,
-//                     color: Color(0xff0C1823),
-//                     fontFamily: 'poppins',
-//                     fontWeight: FontWeight.w700,
-//                   ),
-//                 ),
-//               ),
-//             ],
-//           ),
-
-//         ),
-//       );
-//     });
-//   }
-// }
-
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   const Home({super.key});
 
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -93,7 +26,7 @@ class Home extends StatelessWidget {
               children: [
                 Image.asset(
                   'assets/images/rectangle10.png',
-                  width: 158,
+                  // width: 158,
                   height: 137,
                 ),
                 const Text(
@@ -103,6 +36,7 @@ class Home extends StatelessWidget {
                       fontFamily: "Poppins",
                       fontWeight: FontWeight.w400,
                       fontSize: 12),
+                  textAlign: TextAlign.left,
                 )
               ],
             ),
