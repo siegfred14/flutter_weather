@@ -120,8 +120,8 @@ class _HomeState extends State<Home> {
               ),
             ),
             Positioned(
-              top: 345,
-              left: 127,
+              top: 355,
+              left: 122,
               width: 83,
               height: 21,
               child: Container(
@@ -140,8 +140,8 @@ class _HomeState extends State<Home> {
               ),
             ),
             Positioned(
-              top: 356,
-              left: 140,
+              top: 366,
+              left: 135,
               width: 71,
               height: 66,
               child: Container(
@@ -154,6 +154,50 @@ class _HomeState extends State<Home> {
                         fontSize: 44,
                         fontFamily: "Poppins",
                         fontWeight: FontWeight.w400)),
+              ),
+            ),
+            Positioned(
+              top: 420,
+              left: 37,
+              width: 65,
+              height: 65,
+              child: Container(
+                width: 65,
+                height: 65,
+                child: Image.asset("assets/images/windy_icon.png"),
+              ),
+            ),
+            Positioned(
+              top: 385,
+              left: 172,
+              width: 85,
+              height: 85,
+              child: Container(
+                width: 85,
+                height: 85,
+                child: Image.asset("assets/images/sunrise.png"),
+              ),
+            ),
+            Positioned(
+              top: 420,
+              left: 270,
+              width: 65,
+              height: 65,
+              child: Container(
+                width: 65,
+                height: 65,
+                child: Image.asset("assets/images/clear_night_icon.png"),
+              ),
+            ),
+            Positioned(
+              top: 488,
+              left: 140,
+              width: 85,
+              height: 85,
+              child: Container(
+                width: 85,
+                height: 85,
+                child: Image.asset("assets/images/thunderstorm_icon.png"),
               ),
             ),
             // Positioned(
