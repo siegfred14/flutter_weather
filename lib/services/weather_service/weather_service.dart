@@ -11,7 +11,7 @@ class WeatherService {
   Future<WeatherModel> getWeatherDetails({String? cityName}) async {
     var response = await http.get(
         Uri.parse(
-          Endpoints.weatherAPI(cityName: cityName, appID: AppConst.weatherAPI),
+          Endpoints.weatherAPI(location: cityName, appID: AppConst.weatherAPI),
         ),
         headers: APIHelper().requestHeaders);
     var jsonData = JSON.jsonDecode(response.body);

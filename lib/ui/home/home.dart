@@ -1,3 +1,4 @@
+import 'package:cfrd_temp_app/ui/home/dropdown.dart';
 import 'package:cfrd_temp_app/ui/home/home_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -29,15 +30,17 @@ class _HomeState extends State<Home> {
                   // width: 158,
                   height: 137,
                 ),
-                const Text(
-                  "Quebec-Canada",
-                  style: TextStyle(
-                      color: Color(0xff36424D),
-                      fontFamily: "Poppins",
-                      fontWeight: FontWeight.w400,
-                      fontSize: 12),
-                  textAlign: TextAlign.left,
-                )
+                // DropdownButton(items: [], onChanged: (){}),
+                // DropdownScreen(),
+                // const Text(
+                //   "Quebec-Canada",
+                //   style: TextStyle(
+                //       color: Color(0xff36424D),
+                //       fontFamily: "Poppins",
+                //       fontWeight: FontWeight.w400,
+                //       fontSize: 12),
+                //   textAlign: TextAlign.left,
+                // )
               ],
             ),
             Padding(
