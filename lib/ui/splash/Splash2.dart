@@ -1,4 +1,5 @@
-import 'package:cfrd_temp_app/ui/home/home.dart';
+// import 'package:cfrd_temp_app/ui/home1/home.dart';
+import 'package:cfrd_temp_app/ui/home/home1.dart';
 import 'package:flutter/material.dart';
 
 class Splash2 extends StatefulWidget {

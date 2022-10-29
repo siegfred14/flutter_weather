@@ -1,5 +1,6 @@
 import 'package:cfrd_temp_app/ui/home/dropdown.dart';
 import 'package:cfrd_temp_app/ui/home/home_view_model.dart';
+import 'package:csc_picker/csc_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -14,6 +15,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Container(
         height: double.infinity,
         width: MediaQuery.of(context).size.width,
@@ -30,6 +32,7 @@ class _HomeState extends State<Home> {
                   // width: 158,
                   height: 137,
                 ),
+                CSCPicker(),
                 // DropdownButton(items: [], onChanged: (){}),
                 // DropdownScreen(),
                 // const Text(
@@ -197,7 +200,6 @@ class _HomeState extends State<Home> {
                   //     ),
                   //   ],
                   // ),
-
                   Padding(
                     padding: const EdgeInsets.fromLTRB(15, 20, 15, 0),
                     child: Row(
