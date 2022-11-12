@@ -7,7 +7,7 @@ import 'package:http/http.dart' as http;
 import '../endpoints.dart';
 
 class WeatherService {
-  WeatherModel? weatherModel;
+  // WeatherModel? weatherModel;
 
   Future<WeatherModel> getWeatherDetails({String? cityName}) async {
     var endpoint = Uri.parse(
@@ -15,10 +15,11 @@ class WeatherService {
     var response = await http.get(endpoint);
 
     var body = JSON.jsonDecode(response.body);
-    WeatherModel weatherModel = WeatherModel.fromJson(body);
+    // WeatherModel weatherModel = WeatherModel.fromJson(body);
 
-    // print(weatherModel);
+    print(WeatherModel.fromJson(body));
     // log(body.toString());
-    return weatherModel;
+    // return weatherModel;
+    return WeatherModel.fromJson(body);
   }
 }
