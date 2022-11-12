@@ -1,3 +1,5 @@
+import 'package:cfrd_temp_app/services/weather_service/weather_service.dart';
+import 'package:cfrd_temp_app/models/weather_model.dart';
 import 'package:csc_picker/csc_picker.dart';
 import 'package:flutter/material.dart';
 
@@ -10,6 +12,13 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   String cityValue = "";
+  WeatherService client = WeatherService();
+
+  @override
+  void initState() {
+    super.initState();
+    client.getWeatherDetails(cityName: cityValue);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -46,9 +55,9 @@ class _HomeState extends State<Home> {
                   onStateChanged: (state) {},
                   // showStates: false,
                   onCityChanged: (value) {
-                    // setState(() {
-                    //   cityValue = value;
-                    // });
+                    setState(() {
+                      cityValue = value!;
+                    });
                   },
                   dropdownDialogRadius: 30,
                 ),
@@ -148,7 +157,7 @@ class _HomeState extends State<Home> {
                 width: 71,
                 height: 66,
                 // color: Colors.purple[300],
-                child: const Text("25\u1d52",
+                child: const Text("33\u1d52",
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 44,
