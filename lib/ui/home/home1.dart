@@ -17,7 +17,7 @@ class _HomeState extends State<Home> {
   @override
   void initState() {
     super.initState();
-    client.getWeatherDetails(cityName: cityValue);
+    client.getWeatherDetails(location: "Laval");
   }
 
   @override
@@ -54,9 +54,9 @@ class _HomeState extends State<Home> {
                   onCountryChanged: (country) {},
                   onStateChanged: (state) {},
                   // showStates: false,
-                  onCityChanged: (value) {
+                  onCityChanged: (city) {
                     setState(() {
-                      cityValue = value!;
+                      city = cityValue;
                     });
                   },
                   dropdownDialogRadius: 30,
@@ -157,7 +157,7 @@ class _HomeState extends State<Home> {
                 width: 71,
                 height: 66,
                 // color: Colors.purple[300],
-                child: const Text("33\u1d52",
+                child: const Text("33 \u1d52",
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 44,

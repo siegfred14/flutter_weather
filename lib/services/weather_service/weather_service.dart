@@ -9,17 +9,17 @@ import '../endpoints.dart';
 class WeatherService {
   // WeatherModel? weatherModel;
 
-  Future<WeatherModel> getWeatherDetails({String? cityName}) async {
+  Future<WeatherModel> getWeatherDetails({String? location}) async {
     var endpoint = Uri.parse(
-        "https://api.openweathermap.org/data/2.5/weather?q=$cityName&appid=feef849037b29664ed07d9163f0ce25a&units=metric");
+        "https://api.openweathermap.org/data/2.5/weather?q=$location&appid=feef849037b29664ed07d9163f0ce25a&units=metric");
     var response = await http.get(endpoint);
 
     var body = JSON.jsonDecode(response.body);
-    // WeatherModel weatherModel = WeatherModel.fromJson(body);
+    WeatherModel weatherModel = WeatherModel.fromJson(body);
 
-    print(WeatherModel.fromJson(body));
+    print(weatherModel.temp);
     // log(body.toString());
-    // return weatherModel;
-    return WeatherModel.fromJson(body);
+    return weatherModel;
+    // return WeatherModel.fromJson(body);
   }
 }
